@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS queue (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   username VARCHAR(255),
+   email VARCHAR(255) NOT NULL,
+   type ENUM('SEND', 'CHECK'),
+   status ENUM('N', 'S', 'F') DEFAULT 'N'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
